@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Members</title>
+</head>
+
+<body>
+<h1>Member List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <!--<th>Crue</th>-->
+    </tr>
+    <tr th:each="member : ${members}">
+        <td th:text = "${member.id}">12345</td>
+        <td th:text = "${member.firstName}">testeeName</td>
+        <td th:text = "${member.crue}">testeeCrue</td>
+
+    </tr>
+</table>
+</body>
+
+</html>
